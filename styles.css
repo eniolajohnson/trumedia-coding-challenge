@@ -16,6 +16,38 @@ body {
 .glass {
   background: #ffffff;
   min-height: 80vh;
-  width: 70%;
+  width: 65%;
+  z-index: 3;
+  background: linear-gradient(
+    to right bottom,
+  rgba(255, 255, 255, 0.7),
+  rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 20px;
+  backdrop-filter: blur(2rem);
 }
 
+.bubble1,
+.bubble2 {
+  background: #ffffff;
+  background: linear-gradient(
+    to right bottom,
+  rgba(255, 255, 255, 0.9),
+  rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.bubble1 {
+  top: 5%;
+  right: 10%;
+}
+
+.bubble2 {
+  bottom: 5%;
+  left: 10%;
+}
