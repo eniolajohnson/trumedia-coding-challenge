@@ -1,6 +1,146 @@
-svg {
-  width: 50%;
-  height: 40%;
-  border: 1px solid #cccccc;
-  background-color: #dddddd;
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: x-small;
+}
+
+body {
+  background: linear-gradient(to left bottom, #004756, #0b5b6d);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(71, 71, 71);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+section {
+  margin-top: 3%;
+}
+
+img {
+  width: 10%;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+}
+
+.glass {
+  background: #ffffff;
+  min-height: 80vh;
+  width: 60%;
+  z-index: 3;
+  background: linear-gradient(
+    to right bottom,
+  rgba(255, 255, 255, 0.8),
+  rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 20px;
+  backdrop-filter: blur(2rem);
+  display: flex;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right top,
+  rgba(255, 255, 255, 0.8),
+  rgba(255, 255, 255, 0.2)
+  );
+  border-radius: 20px;
+  position: relative;
+}
+
+.play {
+  text-align: center;
+}
+
+
+.play img {
+  border-radius: 6%;
+  width: 30%;
+  margin-left: 5.5rem;
+  margin-top: 3rem;
+}
+
+.play h3 {
+  border-radius: 6%;
+  margin-top: 13rem;
+}
+
+@media(max-width: 700px) {
+  .play h3{
+    margin-top: 7rem;
+  }
+  .play img {
+    margin-top: 4rem;
+  }
+}
+
+.stats{
+  flex: 3;
+}
+
+.chart {
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.cards{
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: rgb(87, 86, 86);
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 3rem;
+}
+
+.card h2 {
+  color: #ffffff;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 15%;
+}
+
+.card-details h2, .card-details h3 {
+  font-weight: 400;
+  font-size: x-small;
+  color: rgb(71, 69, 69);
+}
+
+.info {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.info h2, .info h3{
+  margin-top: 19%;
+  font-size: 80%;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.info h3{
+  margin-top: 18.5%;
+}
+
+footer {
+  color: white;
+  margin-top: 7%;
 }
