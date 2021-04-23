@@ -38,7 +38,7 @@ const formatDate = (arr) => {
 
 const generate = (data, date) => {
   let key = {};
-  let res = data.reduce(function (arr, v) {
+  const res = data.reduce(function (arr, v) {
     if (key.hasOwnProperty(v[`${date}`])) {
       arr[key[v[`${date}`]]].AB += Number(v.AB);
       arr[key[v[`${date}`]]].BB += Number(v.BB);
@@ -70,10 +70,10 @@ const generate = (data, date) => {
 
 function avgops(arrR) {
   arrR.map(arr => {
-    let one = (arr['BB'] + arr['HBP'] + arr['H']);
-    let two = (arr['BB'] + arr['HBP'] + arr['SF'] + arr['AB']);
-    let obp = Number((one / two).toFixed(3));
-    let slg = Number((arr['TB'] / arr['AB']).toFixed(3));
+    const one = (arr['BB'] + arr['HBP'] + arr['H']);
+    const two = (arr['BB'] + arr['HBP'] + arr['SF'] + arr['AB']);
+    const obp = Number((one / two).toFixed(3));
+    const slg = Number((arr['TB'] / arr['AB']).toFixed(3));
     const resultOPS = obp + slg;
     arr.OBP = obp;
     arr.SLG = slg;
@@ -86,7 +86,7 @@ function avgops(arrR) {
 }
 
 const constructor = (data) => {
-  let labels = [];
+  const labels = [];
   const obj1 = {};
   const obj2 = {};
   obj1.label = 'OPS',
@@ -107,9 +107,9 @@ const constructor = (data) => {
 
   const dataArr = [];
   const dataArr2 = [];
-  let datasets = [];
+  const datasets = [];
   datasets.push(obj1, obj2)
-  let newData = data.map(item => {
+  const newData = data.map(item => {
     dataArr.push(item.OPS)
     dataArr2.push(item.AVG)
     labels.push(item.month)
@@ -119,7 +119,7 @@ const constructor = (data) => {
   return { labels: labels, datasets: datasets }
 }
 
-let options = {
+const options = {
   responsive: true,
   legend: {
     display: true,
@@ -146,21 +146,21 @@ const joshData = generate(joshBell, 'month');
 const joshChart = constructor(joshData);
 
 const ctxBran = document.querySelector("#brandonChart").getContext('2d');
-let chartBran = new Chart(ctxBran, {
+const chartBran = new Chart(ctxBran, {
   type: 'line',
   data: branChart,
   options: options
 });
 
 const ctxBryce = document.querySelector("#bryceChart").getContext('2d');
-let chartBryce = new Chart(ctxBryce, {
+const chartBryce = new Chart(ctxBryce, {
   type: 'line',
   data: bryceChart,
   options: options
 });
 
 const ctxJosh = document.querySelector("#joshChart").getContext('2d');
-let chartJosh = new Chart(ctxJosh, {
+const chartJosh = new Chart(ctxJosh, {
   type: 'line',
   data: joshChart,
   options: options
