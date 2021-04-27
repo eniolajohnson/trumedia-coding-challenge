@@ -4,259 +4,262 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/styles.css">
   <title>TruMedia Code Challenge</title>
 </head>
 <body>
-  <img src="./image/trumedia_white.png" alt="TruMedia logo">
-  <section id="brandon" class="glass">
-    <div class="dashboard">
-      <div class="play player1">
-        <div><img src="" alt="player image"></div>
-        <h3>Name</h3>
-        <p>The Player's Team</p>
+  <main>
+    <header>
+      <img src="./image/trumedia_white.png" alt="TruMedia logo">
+    </header>
+    <section id="brandon" class="glass">
+      <div class="dashboard">
+        <div class="play player1">
+          <div><img src="" alt="player image"></div>
+          <h3>Name</h3>
+          <p>The Player's Team</p>
+        </div>
+        <div class="overallStats">
+          <h1>Overall Statistics</h1>
+          <h2>AB</h2>
+          <h3>531</h3>
+        </div>
+        <div class="overallStats">
+          <h2>BB</h2>
+          <h3>50</h3>
+        </div>
+        <div class="overallStats">
+          <h2>H</h2>
+          <h3>135</h3>
+        </div>
+        <div class="overallStats">
+          <h2>RBI</h2>
+          <h3>54</h3>
+        </div>
+        <div class="overallStats">
+          <h2>OBP</h2>
+          <h3>0.325</h3>
+        </div>
+        <div class="overallStats">
+          <h2>SLG</h2>
+          <h3>0.394</h3>
+        </div>
       </div>
-      <div class="overallStats">
-        <h1>Overall Statistics</h1>
-        <h2>AB</h2>
-        <h3>531</h3>
-      </div>
-      <div class="overallStats">
-        <h2>BB</h2>
-        <h3>50</h3>
-      </div>
-      <div class="overallStats">
-        <h2>H</h2>
-        <h3>135</h3>
-      </div>
-      <div class="overallStats">
-        <h2>RBI</h2>
-        <h3>54</h3>
-      </div>
-      <div class="overallStats">
-        <h2>OBP</h2>
-        <h3>0.325</h3>
-      </div>
-      <div class="overallStats">
-        <h2>SLG</h2>
-        <h3>0.394</h3>
-      </div>
-    </div>
-    <div class="stats">
-      <div class="chart">
-        <h2>Analysis</h2>
-        <canvas id="brandonChart"></canvas>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <h2>Mar</h2>
-          <div id="Mar" class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">11</h3>
+      <div class="stats">
+        <div class="chart">
+          <h2>Analysis</h2>
+          <canvas id="brandonChart"></canvas>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h2>Mar</h2>
+            <div id="Mar" class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">11</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">0</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">2</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">0</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.182</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.182</h3>
+              </div>
             </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">0</h3>
+          </div>
+          <div class="card">
+            <h2>Apr</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">79</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">6</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">15</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">3</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.244</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.316</h3>
+              </div>
             </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">2</h3>
+          </div>
+          <div class="card">
+            <h2>May</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">102</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">7</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">42</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">21</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.446</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.618</h3>
+              </div>
             </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">0</h3>
+          </div>
+          <div class="card">
+            <h2>June</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">89</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">13</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">29</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">14</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.425</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.584</h3>
+              </div>
             </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.182</h3>
+          </div>
+          <div class="card">
+            <h2>July</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">95</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">8</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">19</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">5</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.283</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.242</h3>
+              </div>
             </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.182</h3>
+          </div>
+          <div class="card">
+            <h2>Aug</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">86</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">8</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">13</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">6</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.221</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.256</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Sept</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">69</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">8</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">15</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">5</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.308</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.319</h3>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card">
-          <h2>Apr</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">79</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">6</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">15</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">3</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.244</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.316</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>May</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">102</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">7</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">42</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">21</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.446</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.618</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>June</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">89</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">13</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">29</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">14</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.425</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.584</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>July</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">95</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">8</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">19</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">5</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.283</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.242</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Aug</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">86</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">8</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">13</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">6</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.221</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.256</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Sept</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">69</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">8</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">15</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">5</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.308</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.319</h3>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <section id="bryce" class="glass">
       <div class="dashboard">
@@ -503,261 +506,229 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section id="josh" class="glass">
+      <div class="dashboard">
+        <div class="play player3">
+          <img src="" alt="player image">
+          <h3>Name</h3>
+          <p>The Player's Team</p>
+        </div>
+        <div class="overallStats">
+          <h1>Overall Statistics</h1>
+          <h2>AB</h2>
+          <h3>501</h3>
+        </div>
+        <div class="overallStats">
+          <h2>BB</h2>
+          <h3>77</h3>
+        </div>
+        <div class="overallStats">
+          <h2>H</h2>
+          <h3>131</h3>
+        </div>
+        <div class="overallStats">
+          <h2>RBI</h2>
+          <h3>62</h3>
+        </div>
+        <div class="overallStats">
+          <h2>OBP</h2>
+          <h3>0.357</h3>
+        </div>
+        <div class="overallStats">
+          <h2>SLG</h2>
+          <h3>0.411</h3>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="chart">
+          <h2>Analysis</h2>
+          <canvas id="joshChart"></canvas>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h2>Mar</h2>
+            <div id="Mar" class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">6</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">0</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">3</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">3</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.429</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.500</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Apr</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">106</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">10</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">23</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">13</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.284</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.311</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>May</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">93</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">13</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">26</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">15</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.361</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.484</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>July</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">70</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">10</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">23</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">8</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.512</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.471</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Aug</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">65</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">14</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">15</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">5</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.367</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.385</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Sept</h2>
+            <div class="card-details">
+              <div class="info">
+                <h2>AB</h2>
+                <h3 data-target="AB">83</h3>
+              </div>
+              <div class="info">
+                <h2>BB</h2>
+                <h3 data-target="BB">17</h3>
+              </div>
+              <div class="info">
+                <h2>H</h2>
+                <h3 data-target="H">22</h3>
+              </div>
+              <div class="info">
+                <h2>RBI</h2>
+                <h3 data-target="RBI">8</h3>
+              </div>
+              <div class="info">
+                <h2>OBP</h2>
+                <h3 data-target="OBP">0.390</h3>
+              </div>
+              <div class="info">
+                <h2>SLG</h2>
+                <h3 data-target="SLG">0.470</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
-  <section id="josh" class="glass">
-    <div class="dashboard">
-      <div class="play player3">
-        <img src="" alt="player image">
-        <h3>Name</h3>
-        <p>The Player's Team</p>
-      </div>
-      <div class="overallStats">
-        <h1>Overall Statistics</h1>
-        <h2>AB</h2>
-        <h3>501</h3>
-      </div>
-      <div class="overallStats">
-        <h2>BB</h2>
-        <h3>77</h3>
-      </div>
-      <div class="overallStats">
-        <h2>H</h2>
-        <h3>131</h3>
-      </div>
-      <div class="overallStats">
-        <h2>RBI</h2>
-        <h3>62</h3>
-      </div>
-      <div class="overallStats">
-        <h2>OBP</h2>
-        <h3>0.357</h3>
-      </div>
-      <div class="overallStats">
-        <h2>SLG</h2>
-        <h3>0.411</h3>
-      </div>
-    </div>
-    <div class="stats">
-      <div class="chart">
-        <h2>Analysis</h2>
-        <canvas id="joshChart"></canvas>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <h2>Mar</h2>
-          <div id="Mar" class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">6</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">0</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">3</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">3</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.429</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.500</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Apr</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">106</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">10</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">23</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">13</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.284</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.311</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>May</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">93</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">13</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">26</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">15</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.361</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.484</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>June</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">78</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">13</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">19</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">10</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.344</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.359</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>July</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">70</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">10</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">23</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">8</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">512</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">471</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Aug</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">65</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">14</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">15</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">5</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.367</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.385</h3>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h2>Sept</h2>
-          <div class="card-details">
-            <div class="info">
-              <h2>AB</h2>
-              <h3 data-target="AB">83</h3>
-            </div>
-            <div class="info">
-              <h2>BB</h2>
-              <h3 data-target="BB">17</h3>
-            </div>
-            <div class="info">
-              <h2>H</h2>
-              <h3 data-target="H">22</h3>
-            </div>
-            <div class="info">
-              <h2>RBI</h2>
-              <h3 data-target="RBI">8</h3>
-            </div>
-            <div class="info">
-              <h2>OBP</h2>
-              <h3 data-target="OBP">0.390</h3>
-            </div>
-            <div class="info">
-              <h2>SLG</h2>
-              <h3 data-target="SLG">0.470</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
+  </main>
 
   <footer>&#169; TruMediaNetworks</footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
   <script src="/main.js"></script>
 </body>
 </html>

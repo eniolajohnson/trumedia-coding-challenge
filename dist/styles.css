@@ -9,6 +9,9 @@
 body {
   background: linear-gradient(to left bottom, #004756, #0b5b6d);
   min-height: 100vh;
+}
+
+main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +26,7 @@ section {
 }
 
 img {
-  width: 10%;
+  width: 8%;
   position: absolute;
   top: 2%;
   left: 1%;
@@ -64,7 +67,6 @@ img {
   text-align: center;
 }
 
-
 .play img {
   border-radius: 6%;
   width: 30%;
@@ -77,17 +79,27 @@ img {
   margin-top: 13rem;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 900px) {
   .play h3{
-    margin-top: 7rem;
+    margin-top: 9rem;
   }
   .play img {
-    margin-top: 4rem;
+    margin-left: 1.4rem;
+    width: 50%;
   }
 }
 
 .stats{
   flex: 3;
+}
+
+.overallStats h1 {
+  margin-bottom: 2rem;
+}
+
+.overallStats h2:hover, h3:hover {
+  color: #a09e9e;
+  font-size: 1.2rem;
 }
 
 .chart {
@@ -127,20 +139,26 @@ img {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
+  margin-top: 15%;
 }
 
 .info h2, .info h3{
-  margin-top: 19%;
   font-size: 80%;
   font-weight: 500;
   color: #ffffff;
 }
 
-.info h3{
-  margin-top: 18.5%;
+.info h2 {
+  margin-right: 2px;
+}
+
+.info > h2:hover, .info > h3:hover {
+  color: #004756;
+  font-size: 90%;
 }
 
 footer {
   color: white;
   margin-top: 7%;
+  text-align: center;
 }

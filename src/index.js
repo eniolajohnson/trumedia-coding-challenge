@@ -1,5 +1,4 @@
 import { players, joshBell, bryceHarper, brandonCrawford } from './data';
-import * as d3 from "d3";
 
 const player1Img = document.querySelector('.player1 img');
 const player1Name = document.querySelector('.player1 h3');
